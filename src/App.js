@@ -1,9 +1,7 @@
 import './App.css';
 import {useEffect, useState} from "react";
-import Episodios from "./componentes/Episodios";
-import InfoPer from "./componentes/Infoper";
 import {useDispatch} from "react-redux";
-import {setEpisodios, setInfper, setIncremental} from "./reducers";
+import {setEpisodios, setInfper, setIncremental, setImagen,setNombre} from "./reducers";
 
 function App() {
     const dispatch = useDispatch();
@@ -39,43 +37,38 @@ function App() {
     }
 
     return (
-        <div className="App">
-            <div className="tituloPrincipal">
-                <h1 className="titulo"> Biblioteca personajes de Rick y Morty</h1>
-            </div>
-            <div className="container">
-                <div className="left">
-                    <div className="image-container">
-                        {fInfo.map((ab, ib) => (
-                            <div key={ib} className="image-row">
-                                {ab.map((a, i) => (
-                                    <div key={a.id} className="image-item-container">
-                                        <img src={a.image} className="image-item" alt={`Imagen ${i}`}/>
-                                        <div className="details-container">
+            <div className="App">
+                <div className="tituloPrincipal">
+                    <h1 className="titulo">Biblioteca personajes de Rick y Morty</h1>
+                </div>
+                <div className="container">
+                    <div className="left">
+                        <div className="image-container">
+                            {fInfo.map((ab, ib) => (
+                                <div key={ib} className="image-row">
+                                    {ab.map((a, i) => (
+                                        <div key={a.id} className="image-item-container">
+                                            <img src={a.image} className="personaje-imagenp" alt={`Imagen ${i}`} />
+                                            <div className="details-container">
                                             <span className="tamlet"
-                                                  onClick={() => dispatch(setEpisodios(a.episode))}>{a.name}</span>
-                                            <span className="tamlet" onClick={() =>{verInfo(a)}}>{a.status}</span>
-                                            <span className="tamlet"
-                                                  onClick={() => dispatch(setIncremental(2))}>IncrementalNumero</span>
-
+                                                  onClick={() => {
+                                                      dispatch(setEpisodios(a.episode));
+                                                      dispatch(setImagen(a.image));
+                                                      dispatch(setNombre(a.name));
+                                                  }}>{a.name}</span>
+                                                <span className="tamlet" onClick={() => { verInfo(a); }}>{a.status}</span>
+                                                <span className="tamlet"
+                                                      onClick={() => dispatch(setIncremental(2))}>IncrementalNumero</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                ))}
-                            </div>
-                        ))}
-                    </div>
-                </div>
-                <div className="right">
-                    <div className="arriba">
-                        <Episodios/>
-                    </div>
-                    <div className="abajo info-container">
-                        <InfoPer/>
+                                    ))}
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    );
+        );
 }
 
 export default App;

@@ -1,76 +1,104 @@
 .App {
-  text-align: center;
+    text-align: center;
 }
 
 .container {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
 }
 
 .left {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .right {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .image-container {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 
 .image-row {
-  display: flex;
-  justify-content: center;
-  margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
 }
 
 .image-item-container {
-  margin: 0 10px;
-  text-align: center;
+    margin: 0 10px;
+    text-align: center;
 }
 
 .details-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
 }
 
 .tamlet {
-  cursor: pointer;
-  margin: 5px 0;
+    cursor: pointer;
+    margin: 5px 0;
 }
 
 .arriba, .abajo {
-  margin: 10px 0;
+    margin: 10px 0;
 }
 
 .info-container {
-  background-color: #f0f8ff;
-  border: 1px solid #ccc;
-  padding: 20px;
-  border-radius: 10px;
+    background-color: #f0f8ff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
 }
 
 
 .tituloPrincipal {
-  font-family: 'Arial', sans-serif;
-  font-size: 2.5em;
-  color: #4CAF50;
-  text-shadow: 2px 2px 4px #000000;
-  margin-bottom: 20px;
-  padding: 10px;
-  border-bottom: 2px solid #4CAF50;
-  display: inline-block;
-  background-color: #ffffff;
-  border-radius: 10px;
+    font-family: 'Arial', sans-serif;
+    font-size: 2.5em;
+    color: #4CAF50;
+    text-shadow: 2px 2px 4px #000000;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 2px solid #4CAF50;
+    display: inline-block;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: crimson;
+    background-color: aquamarine;
+    padding: 5px 10px;
+    font-size: 10px;
+}
+
+.activo {
+    color: black;
+    background-color: aqua;
+}
+
+.personaje-imagen {
+    width: 100px;
+    height: auto;
+    border-radius: 50%;
+    margin: 10px 0;
+}
+
+.personaje-imagenp {
+    display: flex;
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
+    margin: 10px 0;
 }
